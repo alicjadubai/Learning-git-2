@@ -1,0 +1,355 @@
+ /*Global*/
+*, *::before, *::after {
+        box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.7;
+    color: #2c2c54
+}
+h1 {
+    font-size: 48px;
+    margin: 0 0 72px 0;
+}
+h2 {
+    text-align: center;
+}
+h3{
+    font-size: 24px;
+    margin: 24px 0 0 0;
+}
+.container {
+    max-width: 1140px;
+    padding: 0 20px 96px 0;
+    margin: 0 auto;
+    }
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 10px;
+     }
+       
+/*??????*/
+.section {
+    padding: 96px 0;
+}
+p:first-of-type {
+    font-weight: 800;
+}
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    background-color: inherit;
+    background-position: 100% 0;
+    background-size: 300%;
+    transition: all 1s;
+}
+.btn:hover {
+    background-position: 0 100%;
+    color: #fff;
+}
+.btn-one {
+    color: #fff;
+    border-color: #fff;
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+}
+.btn-one:hover {
+    color: #10ac84;
+}
+.btn-two {
+    color: #10ac84;
+    border-color: #10ac84;
+    background-image: linear-gradient(90deg, #10ac84 50%, transparent 50%);
+}
+
+.btn-two:hover {
+    color: #fff;
+}
+.btn-three {
+    color: #576574;
+    border-color: #576574;
+    background-image: linear-gradient(90deg, #576574 50%, transparent 50%);
+}
+
+.btn-three:hover {
+    color: #fff;
+}
+.btn-four {
+    color: #ff9f43;
+    border-color: #ff9f43;
+    background-image: linear-gradient(90deg, #ff9f43 50%, transparent 50%);
+}
+
+.btn-four:hover {
+    color: #fff;
+}
+
+
+/* Navigation */
+.navigation {
+    background: #ff6b6b;
+    padding: 12px 0;
+}
+.navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.navigation li {
+    display: inline-block;
+    margin: 0 26px ;
+    position: relative;
+}
+.navigation a {
+    text-decoration:none;
+    color: #fff;
+}
+.navigation a:hover {
+    color: #5f27cd;
+}
+.navigation ul ul li {
+    display: block;
+    margin: 0 0 12px 0;
+}
+.navigation ul ul {
+    display: none;
+    position: absolute;
+    background: #c8d6e5;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 12px;
+}
+.navigation li:hover ul {
+    display: block;
+    margin: 0 auto;
+}
+.navigation li ul a {
+    color: #2e86de;
+    display: block;
+    padding: 0 24px;
+}
+.navigation li ul a:hover {
+    color: #01a3a4;
+}
+
+/*header*/
+.splash {
+    background: #ff6b6b;
+    min-height: 500px;
+    color: #fff;
+    display: flex;
+    padding-bottom: 20px;
+}
+/*musialam dodac padding-bottom, zeby uzyskac przerwe pod CSS Tricks????*/
+.splash-inner {
+    margin: auto;
+    max-width: 70%;
+}
+.splash h1 {
+    margin: 0;
+    font-size: 72px;
+    word-spacing: -24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.splash h2 {
+    margin: 24px 0;
+    font-weight: 400;
+    font-size: 16px;
+    }
+    
+.page-title span {
+    font-style: italic;
+}
+
+/*our services*/
+
+
+.box {
+    flex: 0 0 33.333%;
+    position: relative;
+    display: inline;
+    
+    }
+    
+.number {
+    position: absolute;
+    font-size: 144px;
+    line-height: 1;
+    opacity: 0.1;
+    top: 0;
+    left: 10;
+}
+
+.design .code .marketing {
+  font-size: 24px;
+  margin:  0 0 12px 0; 
+  text-align: right;
+}
+
+
+
+/*our work*/
+.box-work {
+ flex: 0 0 50%;
+ min-height: 300px;
+ position: relative;
+ margin: 0 0 96px 0;
+ }
+.work-image {
+   position: absolute;
+   width: 50%;
+   max-width: 250px;
+   height: 100%; 
+  
+   
+}
+
+/*nie bylam w stanie sobie poradzic z "Półprzezroczysta kolorowa warstwa nałożona na obrazek (a właściwie na jego bezpośredniego diva-rodzica) to nic innego, jak pseudoelement :after z opacity: 0.3, przesunięty o 20px w prawo i w dół. Uwaga: aby warstwa mogła wychodzić poza obręb obrazka (jak na projekcie), divowi-rodzicowi nie nadawaj overflow: hidden;."
+W interncie znalzlam takie rozwiazanie*/
+.work-image:after {
+   opacity: 0.3;
+   height: 90%; 
+   content: "";  
+   position: absolute;
+   width: 90%;
+   max-width: 250px;
+   top: 10%;
+   left: 10%; 
+   background: #cccccc;
+   z-index: -1;
+ 
+}
+.work-image img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    
+    }
+
+.work-description {
+    padding: 16px 0 16px 55%;
+    text-align: left;
+    position: absolute; 
+    }
+.our-work p:last-of-type {
+    font-weight: 800;
+}
+.our-work p {
+    font-weight: 400;
+    line-height: 1
+}
+.btn-five {
+    border: 0;
+    margin: 16px 0;
+    padding: 0;
+    text-align: left;
+}
+/*contact us*/
+.form {
+    flex: 2 0 0;
+}
+.contact-details {
+    flex: 1 0 0;
+}
+/*form*/
+.contact-us {
+   background-color: #336699
+}
+.input  {
+   
+   border: 0; 
+   border-bottom: 3px #fff solid;
+   font-size: 16px;
+    background-color: #336699;
+    width: 80%;
+    padding-top: 20px
+}
+.font-contact {
+   color: #fff; 
+   font-family: 'Inconsolata', monospace;
+   line-height: 1.7;
+   font-weight: 200
+}
+.contact-details p {
+    margin:0;
+   
+}
+.form input {
+    color:#fff;
+}
+/*stopka*/
+/*jak wypozycjonowac logo wertykalnie?*/
+ i { 
+    font-size: 30px;
+    background: red;
+    width: 60px;
+    height: 60px;
+     border-radius: 50%;
+    color:#fff;
+      top: 50%;
+    left: 50%;
+    transition: all 10s;
+  padding-top: 10px;
+  
+      }
+i:hover {
+    transform: scale(1.2);
+}
+.media-logo {
+    float: left;
+    width: 33.3%;
+    height: 100%;
+    text-align:center;
+   
+   
+  
+    }
+.footer ul {
+ list-style-type: none;
+  margin: 0; 
+  padding: 0;
+  
+}
+.footer ul li {
+   position:relative;
+   margin:0;
+   font-size: 0;
+   
+  }
+.footer {
+   width: 50%;
+   margin: 0 auto;
+   padding-top: 25px
+}
+/* Media */
+@media (max-width: 767px) {
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column
+     }
+.box-work {
+ max-width: 100%;
+ height: 150px;
+ position: relative;
+ 
+ }
+.contact-details {
+    margin-top: 20px;
+}
+}
