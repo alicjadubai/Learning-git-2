@@ -1,0 +1,4 @@
+npm install --global autoprefixer-cli
+
+npm install -g html-validate
+html-validate FILENAME..
